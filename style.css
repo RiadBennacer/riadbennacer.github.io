@@ -1,0 +1,163 @@
+.progress-bar, 
+.progress-bar::before,
+.progress-bar::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+.background {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(kid-wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+	padding-top: 500px;
+}
+
+.progressBar-container {
+	margin: 0 auto 0 auto;
+	text-align: center;
+	position: relative;
+	width: 600px;
+	height: 3em;
+	background-color: #ff5722;
+	border-radius: 1.5em;
+	color: #fff;
+	box-shadow: 0 6px 10px 0 rgba(0,0,0,.3)
+}
+
+.progressBar-container .progress {
+	position: absolute;
+	left: 1em;
+	top: 1em;
+	bottom: .5em;
+	
+}
+
+.progressBar-container .progress-bar {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	left: 3.5em;
+	top: .5em;
+	bottom: .5em;
+	min-width: 2rem;
+	max-width: calc(100% - 5em);
+/*	background-color: #1ABC9C;*/
+	border-radius: 1em;
+	padding: 1em;
+	background-image: linear-gradient(90deg, #e91e63 0%, #e91e63 20%, #03a9f4 20%, #03a9f4 40%, #8bc34a 40%, #8bc34a 60%, #ffeb3b 60%, #ffeb3b 80%, #1ABC9C 80%, #1ABC9C 100%);
+	background-position: 0 0;
+    background-repeat: repeat-x;
+/*	animation: movebar 5s linear infinite*/
+	box-shadow: 0 6px 10px 0 rgba(0,0,0,.3)
+}
+
+.stylization {
+	position: absolute;
+    z-index: 999;
+    height: 4px;
+    width: 90%;
+    left: 5%;
+    top: 6px;
+    opacity: 0.3;
+}
+
+.stylization::before {
+    background: #fff;
+    left: 0;
+    right: 10px;
+}
+
+.stylization::before, .stylization::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 4px;
+    top: 0;
+    border-radius: 2px;
+}
+
+.stylization::after {
+    width: 6px;
+    background: #fff;
+    right: 0;
+}
+
+.progress-bar .scissors {
+	position: absolute;
+	right: -23px;
+	width: 40px;
+	top: -4px;
+}
+
+.progressBar-container img.balloon {
+	width: 50px;
+	position: absolute;
+	bottom: 2rem;
+	left: 18%;
+	border: none;
+}
+
+.progressBar-container img.release {
+	animation-name: release;
+	animation-duration: 4s;
+	bottom: 10rem;
+	width: 100px;
+}
+
+.progressBar-container img.loot-release {
+	animation-name: loot-release;
+	animation-duration: 4s;
+	bottom: 10rem;
+	width: 100px;
+}
+
+.progressBar-container img.balloon-pop {
+	animation-name: balloon-pop;
+	animation-direction: 1s;
+}
+
+@keyframes release {
+  from {bottom: 2.8rem; width: 50px}
+  to {bottom: 10rem;width: 100px;}
+}
+
+@keyframes loot-release {
+  from {bottom: 2.8rem; width: 50px}
+  to {bottom: 10rem;width: 100px;}
+}
+
+@keyframes balloon-pop {
+	from {width: 200px}
+	to {width: 250px;}
+}
+
+@keyframes movebar {
+	from{
+    	background-position: 0 0;
+	}
+	to {
+    	background-position: 400px 0
+	}
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
